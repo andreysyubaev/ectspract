@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.bignerdranch.android.z2.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/navigation_dashboard"
+        android:name="com.bignerdranch.android.z2.ui.dashboard.ProductsFragment"
+        android:label="@string/title_products"
+        tools:layout="@layout/fragment_products" />
+
+    <fragment
+        android:id="@+id/navigation_notifications"
+        android:name="com.bignerdranch.android.z2.ui.notifications.MovieFragment"
+        android:label="@string/films"
+        tools:layout="@layout/fragment_movie" >
+        <action
+            android:id="@+id/action_navigation_notifications_to_navigation_movie_url"
+            app:destination="@id/navigation_movie_url" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_movie_url"
+        android:name="com.bignerdranch.android.z2.ui.notifications.MovieWebFrag"
+        android:label="@string/web"
+        tools:layout="@layout/fragment_movie_web">
+
+        <action
+            android:id="@+id/action_navigation_movie_url_to_navigation_notifications"
+            app:destination="@id/navigation_notifications" />
+    </fragment>
+</navigation>

@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">z2</string>
+    <string name="title_home">Home</string>
+    <string name="title_products">Продукты</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="movie">Фильмы</string>
+    <string name="films">Фильмы</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="web">web</string>
+</resources>
